@@ -1,0 +1,8 @@
+age : INTEGER
+n : INTEGER := 10;
+
+REPEAT
+    Read (age);
+UNTIL (age <= 0) OR (age > 120);
+write (age);
+// The code reads an integer value for age and continues to prompt the user until a valid age is entered (between 1 and 120).

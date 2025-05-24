@@ -1,0 +1,69 @@
+// This program reads a sentence from the user and stores the number of character in a variable.
+// This program reads a sentence from the user and stores its length in a variable.
+// It also counts the number of vowels in the sentence and returns that count.
+// The program demonstrates basic string manipulation and counting in a simple way.
+// The program uses functions to encapsulate the logic for calculating the length of the sentence, count the number of characters and counting vowels.
+// The program is written in a simple pseudo-code style for educational purposes.
+// This program reads a sentence from the user, calculates its length, and counts the number of character and vowels in it.
+
+FUNCTION character_count(sentence : STRING) : INTEGER
+VAR
+    i : INTEGER;
+    count : INTEGER := 0; // Initialize count to 0
+BEGIN
+    FOR i := 1 TO LENGTH(sentence) DO
+        count := count + 1; // Increment count for each character in the sentence
+    END FOR;
+    RETURN count; // Return the total character count
+END FUNCTION;
+
+// This program reads a sentence from the user and stores its length in a variable.
+// It also counts the number of vowels in the sentence and returns that count.
+// The program demonstrates basic string manipulation and counting in a simple way.
+// The program uses functions to encapsulate the logic for calculating the length of the sentence, count the number of characters and counting vowels.
+// The program is written in a simple pseudo-code style for educational purposes.
+// This program reads a sentence from the user, calculates its length, and counts the number of character and vowels in it.
+FUNCTION lenght_of_sentence(sentence : STRING) : INTEGER
+VAR
+    length : INTEGER;
+BEGIN
+    length := 0;
+    WHILE (sentence[length + 1] <> '\0') DO
+        length := length + 1;
+    ENDWHILE;
+    RETURN length;
+END FUNCTION;
+
+// This function calculates the number of words in a given sentence and returns an integer value.
+FUNCTION wordcount(sentence : STRING) : INTEGER
+VAR
+    i : INTEGER;
+    count : INTEGER := 1; // Start with 1 to count the first word
+BEGIN
+    FOR i := 1 TO LENGTH(sentence) DO
+        IF (sentence[i] = ' ' OR sentence[i]='.') THEN
+            count := count + 1; // Increment count for each space found
+        ENDIF;
+    END FOR;
+    RETURN count; // Return the total word count
+END FUNCTION;
+// Read a sentence from the user and store it in the variable 'sentence'
+// The sentence is stored in the variable 'sentence'
+// This is a simple example of reading input from the user and storing it in a variable.
+// The user can input any sentence, and it will be stored for further processing or output.
+// The sentence can be used later in the program for various purposes, such as displaying it back to the user or processing it further.
+FUNCTION count_vowels(sentence : STRING) : INTEGER
+VAR
+    i : INTEGER;
+    count : INTEGER := 0;
+BEGIN       
+    FOR i := 1 TO LENGTH(sentence) DO
+        IF (sentence[i] = 'a' OR sentence[i] = 'e' OR sentence[i] = 'i' OR 
+            sentence[i] = 'o' OR sentence[i] = 'u' OR 
+            sentence[i] = 'A' OR sentence[i] = 'E' OR sentence[i] = 'I' OR 
+            sentence[i] = 'O' OR sentence[i] = 'U') THEN
+            count := count + 1;
+        ENDIF;
+    END FOR;
+    RETURN count;
+END FUNCTION;

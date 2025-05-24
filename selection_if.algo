@@ -1,0 +1,9 @@
+ticket_price := 20;
+
+IF (age < 18) THEN
+    ticket_price := 10;
+ELSE
+    ticket_price := 20;
+END_IF
+// The ticket price is set to 10 if the age is less than 18, otherwise it is set to 20.
+// This is a simple example of using an IF statement to set a value based on a condition.

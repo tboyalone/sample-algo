@@ -1,0 +1,16 @@
+FUNCTION linear_search(tab : ARRAY_OF INTEGER, elt : INTEGER) : INTEGER
+VAR
+    j : INTEGER;
+    value : INTEGER;
+BEGIN
+    j := 0;
+    value := -1;
+    WHILE (j < tab.length) DO
+        IF (tab[j] = elt) THEN
+            value := j;
+        ENDIF;
+        j := j + 1;
+    ENDWHILE;
+    // If the element is not found, value remains -1
+    RETURN value ;
+END

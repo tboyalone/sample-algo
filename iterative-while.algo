@@ -1,0 +1,9 @@
+count : INTEGER := 0;
+n : INTEGER := 10;
+
+WHILE (n%2 = 0) DO
+    n = n / 2;
+    count = count + 1;
+END_WHILE
+
+WRITE(count);

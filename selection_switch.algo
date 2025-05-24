@@ -1,0 +1,9 @@
+SWITCH (x) DO
+    case 1 : write("Hello World 1"); BREAK;
+    case 2 : write("Hello World 2"); BREAK;
+    case 3 : write("Hello World 3"); BREAK;
+    case 4 : write("Hello World 4"); BREAK;
+    case 5 : write("Hello World 5"); BREAK;
+    case 6 : write("Hello World 6"); BREAK;
+    default : write("Hello World - Default");
+END_SWITCH

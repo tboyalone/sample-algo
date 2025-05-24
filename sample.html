@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function character_count(str) {
+            if (typeof str !== 'string') {
+                throw new Error('Input must be a string');
+            }
+            return str.length;
+        }
+    function word_count(str) {
+            if (typeof str !== 'string') {
+                throw new Error('Input must be a string');
+            }
+            return str.trim().split(/\s+/).length;
+        }
+    function vowel_count(str) {
+            if (typeof str !== 'string') {
+                throw new Error('Input must be a string');
+            }
+            const vowels = str.match(/[aeiouAEIOU]/g);
+            return vowels ? vowels.length : 0;
+        }
+
+    console.log(character_count("This is a sample string."));
+    console.log(word_count("This is a sample string."));
+    console.log(vowel_count("This is a sample string."));
+</script>
+</html>
+
+
