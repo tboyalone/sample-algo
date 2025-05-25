@@ -9,6 +9,10 @@
     
 </body>
 <script>
+    strCount=0;
+    wrdCount=0;
+    vwCount = 0
+
     function character_count(str) {
             if (typeof str !== 'string') {
                 throw new Error('Input must be a string');
@@ -29,9 +33,45 @@
             return vowels ? vowels.length : 0;
         }
 
-    console.log(character_count("This is a sample string."));
-    console.log(word_count("This is a sample string."));
-    console.log(vowel_count("This is a sample string."));
+    console.log(character_count("I did both the algorithm, and the actual implementation in javascript."));
+    console.log(character_count2("I did both the algorithm, and the actual implementation in javascript."));
+    console.log(word_count("I did both the algorithm, and the actual implementation in javascript."));
+    console.log(word_count2("I did both the algorithm, and the actual implementation in javascript."));
+    console.log(vowel_count("I did both the algorithm, and the actual implementation in javascript."));
+    console.log(vowel_count2("I did both the algorithm, and the actual implementation in javascript."));
+
+    function character_count2(str) {
+            if (typeof str !== 'string') {
+                throw new Error('Input must be a string');
+            }
+            for (let i = 0; i < str.length; i++) {
+                strCount = strCount + 1;
+            }
+            return strCount;
+        }
+    function word_count2(str) {
+            if (typeof str !== 'string') {
+                throw new Error('Input must be a string');
+            }
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === " " || str[i] === "\n" || str[i] === "\t" || str[i] === ".") {
+                    wrdCount = wrdCount + 1;
+                }
+            }
+            return wrdCount; // Adding 1 for the last word
+        }
+    function vowel_count2(str) {
+            if (typeof str !== 'string') {
+                throw new Error('Input must be a string');
+            }
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === "a" || str[i] === "e" || str[i] === "i" || str[i] === "o" || str[i] === "u" ||
+                    str[i] === "A" || str[i] === "E" || str[i] === "I" || str[i] === "O" || str[i] === "U") {
+                    vwCount = vwCount + 1;
+                }
+            }
+            return vwCount;
+        }
 </script>
 </html>
 
